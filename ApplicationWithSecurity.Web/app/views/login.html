@@ -1,30 +1,58 @@
-﻿<form role="form">
-    <div class="row">
-        <div class="col-md-2">
-            &nbsp;
-        </div>
-        <div class="col-md-4">
-            <h2 class="form-login-heading">Login</h2>
-            <input type="text" class="form-control" placeholder="Username" data-ng-model="loginData.userName" required autofocus>
-            <input type="password" class="form-control" placeholder="Password" data-ng-model="loginData.password" required>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" data-ng-model="loginData.useRefreshTokens"><strong> Use Refresh Tokens</strong>
-                </label>
+﻿<html>
+<head>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <form role="form">
+        <div class="container my-3">
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <div class="card shadow-lg">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <h4 class="font-weight-bold text-primary">Login</h4>
+                                    <hr />
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-md-6">
+                                    <div>
+                                        <label class="text-secondary">Username</label>
+                                        <input type="text" class="form-control" placeholder="Username"
+                                               data-ng-model="loginData.userName" required autofocus>
+                                    </div>
+                                    <div>
+                                        <label class="text-secondary">Password</label>
+                                        <input type="password" class="form-control" placeholder="Password"
+                                               data-ng-model="loginData.password" required>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="text-secondary">
+                                            <input type="checkbox" data-ng-model="loginData.useRefreshTokens">
+                                            Use Refresh Tokens
+                                        </label>
+                                    </div>
+                                    <button class="btn btn-md btn-outline-primary btn-block"
+                                            type="submit" data-ng-click="login()">
+                                        Login <i class="fa fa-sign-in"></i>
+                                    </button>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <button class="btn btn-md btn-info btn-block" type="submit" data-ng-click="login()">Login</button>
-              <div data-ng-hide="message == ''" class="alert alert-danger">
-                {{message}}
-            </div>
+
+
         </div>
-        <div class="col-md-4">
-            <h2 class="form-login-heading">Social Logins</h2>
-            <p>Or you can login using one of the social logins bleow</p>
-            <button class="btn btn-large btn-facebook btn-block" type="button" data-ng-click="authExternalProvider('Facebook')"><i class="fa fa-facebook"></i> | Connect with Facebook</button>
-            <button class="btn btn-large btn-google-plus btn-block" type="button" data-ng-click="authExternalProvider('Google')"><i class="fa fa-google-plus"></i> | Connect with Google+</button>
-        </div>
-        <div class="col-md-2">
-            &nbsp;
-        </div>
-    </div>
-</form>
+
+    </form>
+</body>
+</html>
+
